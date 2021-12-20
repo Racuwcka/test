@@ -1,0 +1,272 @@
+body{
+	font-family: 'Poppins', sans-serif;
+	min-height: 100vh;
+	margin: 0;
+	padding: 0;
+}
+li{
+	list-style: none;
+	display: flex;
+}
+a{
+	text-decoration: none;
+}
+header{
+	background: #f6f6f6;
+	padding: 22px 0;
+}
+.header-container{
+	width: 90%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+}
+.header-container a{
+	color: #212121;
+	font-size: 13px;
+	margin-right: 60px;
+	padding: 27px 9px;
+}
+.header-container a:hover{
+	background: #ffea00;
+}
+#menu-checkbox{
+	display: none;
+}
+ul{
+	display: flex;
+}
+nav{
+	margin-top: 20px;
+}
+.top-slide{
+	background: url(img/slider_bg.jpg);
+	background-size: cover;
+	padding-top: 120px;
+	padding-bottom: 300px;
+}
+.top-container{
+	width: 85%;
+	margin: 0 auto;
+}
+.top-slide h2{
+	background: #ffea00;
+	display: inline;
+	font-size: 70px;
+	padding: 0 13px;
+}
+.top-slide :nth-child(2){
+	margin-bottom: 10px;
+}
+.top-slidee-text{
+	width: 380px;
+	font-size: 24px;
+	color: #fff;
+}
+.top-slidee-text span{
+	display: inline-block;
+	margin-bottom: 5px;
+	/*background-color: #3f3f44;*/
+	background: #414146;
+	/*padding: 0 6px;*/
+}
+.specialize-container{
+	width: 80%;
+	margin: 0 auto;
+	text-align: center;
+}
+.specialize-container h3{
+	font-size: 35px;
+}
+.specialize-container p{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-size: 24px;
+}
+.bottom-card{
+	background: #414146;
+	position: relative;
+	top: -30px;
+}
+.first-p{
+	font-size: 20px;
+	color: #fff;
+}
+.specialize-cards{
+	display: flex;
+	justify-content: space-between;
+}
+.portfolio{
+	width: 90%;
+	margin: 0 auto;
+	text-align: center;
+}
+.portfolio h4{
+	font-size: 18px;
+	background: #424147;
+	padding: 0 8px;
+	display: inline-block;
+	color: #f5e10a;
+	margin-bottom: 30px;
+}
+.portfolio p{
+	color: #424146;
+	font-size: 16px;
+}
+.toggles button{
+	border: none;
+	background: #fff;
+	color: #424146;
+	cursor: pointer;
+	font-size: 16px;
+	margin: 20px 5px;
+}
+.toggles button::after{
+	content: ' /';
+	margin-left: 1vw;
+}
+.toggles button:last-child::after{
+	content: '';
+}
+.posts{
+	width: 90%;
+	display: grid;
+	margin: 0 auto;
+	grid-template-columns: repeat(4, auto);
+	grid-gap: 2vw;
+}
+.posts img{
+	height: auto;
+	max-width: 100%;
+}
+.brand-slider{
+	width: 90%;
+	margin: 0 auto;
+	text-align: center;
+}
+.brand-slider h4{
+	margin-top: 40px;
+	font-size: 18px;
+	background: #424147;
+	padding: 0 8px;
+	display: inline-block;
+	color: #f5e10a;
+	margin-bottom: 30px;
+}
+.brand-slider p{
+	color: #424146;
+	font-size: 16px;
+}
+footer{
+	background: #414146;
+	padding: 30px 0;
+	color: #fff;
+}
+footer h4{
+	font-size: 18px;
+}
+.footer-container{
+	width: 90%;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 40% 30% 20%;
+	grid-column-gap: 3%;
+}
+.about-us a{
+	background: #000;
+	color: #fff;
+	font-size: 15px;
+	padding: 15px;
+	border-bottom: 2px solid #ffea00;
+	display: inline-block;
+}
+.images{
+	margin-top: 10px;
+	display: grid;
+	grid-template-columns: repeat(3, auto);
+	justify-content: start;
+	grid-gap: 5px;
+}
+.tweets{
+	display: grid;
+}
+.tweets span{
+	color: #ffea00;
+}
+.tweets img{
+	margin-right: 1vw;
+}
+
+
+
+
+
+@media screen and ( max-width: 420px) {
+	.header-container{
+		width: 100%;
+		display: flex;
+		justify-content: space-around;
+	}
+	.main-menu{
+		display: none;
+	}
+	.main-menu li{
+		width: 100%;
+		display: block;
+		font-size: 12px;
+	}
+	.main-menu a{
+		display: block;
+		padding: 8px;
+	}
+	.toogle-button{
+		text-align: center;
+		display: block;
+		cursor: pointer;
+		color: #000;
+	}
+	.toogle-button::after{
+		content: attr(data-open);
+		text-transform: uppercase;
+		display: block;
+	}
+	#menu-checkbox:checked + nav[role="navigation"] .main-menu{
+		display: block;
+	}
+	#menu-checkbox:checked + nav[role="navigation"] .toogle-button::after{
+		content: attr(data-close);
+	}
+	.header-container a{
+		margin-right: -60px;
+	}
+	.main-menu{
+		position: relative;
+		top: 12px;
+		right: 7px;
+	}
+	.top-slide {
+	    padding-top: 40px;
+	    padding-bottom: 40px;
+	}
+	.top-slide h2 {
+    	font-size: 32px;
+	}
+	.top-slide p{
+		font-size: 16px;
+	}
+	.specialize-container p{
+		font-size: 16px;
+	}
+	.specialize-cards{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	.bottom-card{
+		width: 250px;
+		margin: 0 auto;
+	}
+	.posts{
+		grid-template-columns: auto;
+	}
+}
